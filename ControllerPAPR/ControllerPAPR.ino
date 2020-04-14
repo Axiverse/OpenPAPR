@@ -62,7 +62,7 @@
 
 #include <util/atomic.h>
 
-uint16_t s_tachometer = 0;          // Tachometer pulse counter.
+volatile uint16_t s_tachometer = 0; // Tachometer pulse counter.
 uint32_t s_tachometer_start = 0;    // Mills when the pulse counter started.
 
 uint8_t s_battery_level = 0;
