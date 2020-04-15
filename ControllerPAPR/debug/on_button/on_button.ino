@@ -1,12 +1,12 @@
 // LEDs
-const int pinLedError = D8;
-const int pinBattLed1 = D9;
-const int pinBattLed2 = D10;
-const int pinBattLed3 = D11;
-const int pinBattLed4 = D12;
+const int pinLedError = 8;
+const int pinBattLed1 = 9;
+const int pinBattLed2 = 10;
+const int pinBattLed3 = 11;
+const int pinBattLed4 = 12;
 const int pinOn = A1;
 // Buttons
-const int pinPwrModeButton = D2;
+const int pinPwrModeButton = 2;
 // Flags
 const int LED_ON = 0;
 const int LED_OFF = 1;
@@ -33,7 +33,7 @@ void setup() {
 
 bool on = false;
 void loop() {
-    int state = digitaRead(pinPwrModeButton);
+    int state = digitalRead(pinPwrModeButton);
     delay(500); // instead of debouncing just wait 1/2 a second
           
     if (on) {
